@@ -21,7 +21,7 @@
 
 <script>
     async function init() {
-        // Modern dapp browsers...
+        // Modern dapp browsers
         if (window.ethereum) {
             window.web3 = new Web3(window.ethereum);
             try {
@@ -32,11 +32,11 @@
                 console.error("User denied account access");
             }
         }
-        // Legacy dapp browsers...
+        // Legacy dapp browsers
         else if (window.web3) {
             window.web3 = new Web3(window.web3.currentProvider);
         }
-        // Non-dapp browsers...
+        // Non-dapp browsers
         else {
             console.log('Non-Ethereum browser detected. You should consider trying MetaMask!');
         }
@@ -44,7 +44,7 @@
 
     init();
 
-    const contractAddress = '0xA03DB185c6A21D49055E3F874819033E05e82202'; // Update with your contract address
+    const contractAddress = '0x3019E2658C92991F6224a34c6BdED0Ef5818043E'; // Update with your contract address
     const contractABI = [
         {
             "constant": false,
@@ -155,8 +155,6 @@
             "type": "function"
         }
     ];
-
-
 
 
     const web3 = window.web3;
